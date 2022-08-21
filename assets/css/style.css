@@ -6,11 +6,11 @@
 }
 
 :root {
-    --cor-1: #98d7e6;
-    --cor-2: #fc8571;
-    --cor-3: #ffd879;
-    --cor-4: #f7f8fa;
-    --cor-5: #1b1b1b;
+    --cor-1: #8D99AE;
+    --cor-2: #2B2D42;
+    --cor-3: #EDF2F4;
+    --cor-4: #1b1b1b;
+    --cor-5: #EF233C;
 }
 
 body {
@@ -18,13 +18,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor-2);
-    color: var(--cor-5);
+    background-color: var(--cor-1);
+    color: var(--cor-4);
     font-family: 'Lato', sans-serif;
 }
 
 .container {
-    background-color: var(--cor-4);
+    background-color: var(--cor-3);
     max-width: 70rem;
     width: 100%;
     min-height: 20rem;
@@ -53,16 +53,25 @@ input:focus {
 #enviar {
     width: 5rem;
     padding: .5rem;
-    background-color: var(--cor-4);
+    background-color: var(--cor-3);
     transition: .2s;
     cursor: pointer;
 }
 
 #enviar:hover {
+    text-shadow: 1px 0 var(--cor-4), -1px 0 var(--cor-4), 0 1px var(--cor-4), 0 -1px var(--cor-4),
+             1px 1px var(--cor-4), -1px -1px var(--cor-4), 1px -1px var(--cor-4), -1px 1px var(--cor-4);
     background-color: var(--cor-2);
     border-radius: 2px;
-    border: 1px solid var(--cor-4);
-    color: var(--cor-4);
+    border: 1px solid var(--cor-3);
+    color: var(--cor-3);
+}
+
+#erro {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: .5rem;
 }
 
 #tabela {
@@ -85,30 +94,53 @@ th:nth-child(1){
 }
 
 th:nth-child(2){
-    width: 23%;
+    width: 25%;
 }
 
 th:nth-child(3){
-    width: 23%;
+    width: 25%;
 }
 
-th:nth-child(4){
-    width: 23%;
+th:nth-child(3){
+    width: 25%;
 }
 
 th:nth-child(5){
-    width: 100%;
+    width: 18%;
 }
 
 tr {
-    background-color: var(--cor-4);
-}
-
-tr:nth-child(even){
     background-color: var(--cor-3);
 }
 
+tr:nth-child(even){
+    background-color: var(--cor-2);
+    color: var(--cor-3);
+}
+
 th, td {
-    border-top: 1px solid var(--cor-4);
-    border-bottom: 1px solid var(--cor-4);
+    border-top: 1px solid var(--cor-3);
+    border-bottom: 1px solid var(--cor-3);
+}
+
+.tabelaBtn {
+    width: 70px;
+    padding: 4px 7px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: .2s;
+    border: none;
+    border-radius: 5px;
+}
+
+.tabelaBtn:hover {
+    transform: scale(1.1);
+}
+
+.editar {
+    background-color: var(--cor-1);
+}
+
+.excluir {
+    background-color: var(--cor-5);
 }
