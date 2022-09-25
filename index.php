@@ -17,7 +17,6 @@
 
     if(isset($_GET['query'])){
         $query = $_GET['query'];
-        echo $query;
         $app->update($app->connect(), $query);
     }
 ?>
