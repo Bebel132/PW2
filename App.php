@@ -65,8 +65,11 @@ class App {
         $this->showData($this->table);
     }
 
-    public function delete($conn, $id){}
+    public function delete($conn, $id){
+        $conn->exec("DELETE FROM aluno WHERE id=$id");
+    }
 
-    public function update($conn, $id){}
+    public function update($conn, $id
+    ){}
 }
 ?>

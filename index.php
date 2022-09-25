@@ -8,7 +8,7 @@
     }
 
     if(isset($_GET['del'])){
-        
+        $app->delete($app->connect(), $_GET['del']);
     } else if(isset($_GET['edit'])){
         
     }
