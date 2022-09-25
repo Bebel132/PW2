@@ -67,9 +67,12 @@ class App {
 
     public function delete($conn, $id){
         $conn->exec("DELETE FROM aluno WHERE id=$id");
+        $conn = null;
     }
 
-    public function update($conn, $id
-    ){}
+    public function update($conn, $query){
+        $conn->exec("$query");
+        $conn = null;
+    }
 }
 ?>
